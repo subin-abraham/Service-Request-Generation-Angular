@@ -1,0 +1,9 @@
+.container-div .existingServiceRequest{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.container-div .existingServiceRequest .table {
+    border: 2px solid;
+    width: 50%;
+}
