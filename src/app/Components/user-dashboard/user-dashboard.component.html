@@ -1,7 +1,7 @@
 <div class="container-div">
     <div class="createNewTask">
         <!-- Button trigger modal -->
-        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" id="fer">
             Create Service Request
         </button>
 
@@ -33,14 +33,18 @@
         <table class="table">
             <thead>
                 <tr>
+                    <th scope="col">SL No:</th>
                     <th scope="col">Task</th>
                     <th scope="col">Status</th>
                 </tr>
             </thead>
             <tbody>
-                <tr *ngFor="let item of tableData">
-                    <td>${{item}}</td>
+                <tr *ngFor="let item of user">
+                    <td>{{item.id}}</td>
+                    <td>{{item.serviceRequest}}</td>
                     <td>mdo</td>
+                    <button (click)="updateUserInput()">Update</button>
+                    <button (click)="deleteUserInput(item.id)" >Delete</button>
                 </tr>
             </tbody>
         </table>
